@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>home works!</p>
+        </div>
+    </div>
+</div>
+
+<span class="setup" >Given Number</span>
+<h1>{{data}}</h1>  
+<!-- string interpolation -->
+<button type="button" class="btn-btn-sucess" (click)="add()" >Add Number</button>
+<button type="button" class="btn-btn-sucess" (click)="delete()">Delete Number</button><br>
+<label>Enter the data value</label><br>
+<input type="number" class="form-control" [(ngModel)]="data"><br>
+<label>passing the data using event binding</label><br>
+<input type="text" class="form-control" [(ngModel)]="name">
+<!-- <p *ngIf="isDirecitve" [ngStyle]="{backgroundcolor:getcolor()}">{{name}}</p> -->
+<p *ngIf="isDirecitve" [ngStyle]="{'background-color':'red'}">{{name}}</p>

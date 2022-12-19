@@ -1,0 +1,7 @@
+<label id="success">You are successfull!</label> <br><br>
+<label>username</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="button" (click)="reset()" [disabled]="!username">Reset User</button><br><br><br>
+<button class="button" (click)="buttonclick()">Display details </button>
+<p *ngFor='let n of NewArray;'>User is Paridhi Taunk {{n}} </p> 
