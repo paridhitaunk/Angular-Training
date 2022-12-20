@@ -4,4 +4,8 @@
 <p>{{username}}</p>
 <button class="button" (click)="reset()" [disabled]="!username">Reset User</button><br><br><br>
 <button class="button" (click)="buttonclick()">Display details </button>
-<p *ngFor='let n of NewArray;'>User is Paridhi Taunk {{n}} </p> 
+<p *ngIf="count%2!=0">User is Paridhi Taunk  </p> 
+<div *ngFor="let n of NewArray">
+    <p *ngIf="n<5" [ngStyle]="{'background-color':'white'}">{{n}}</p>
+    <p *ngIf="n>=5" [ngStyle]="{'background-color':'blue'}">{{n}}</p>
+    </div>

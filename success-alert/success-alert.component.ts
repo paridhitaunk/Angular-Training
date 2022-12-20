@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class SuccessAlertComponent 
 {
  username:string="";
- isClicked:boolean=false;
  NewArray:number[]=[];
  count:number=0;
  i:number = 0;
@@ -18,8 +17,8 @@ export class SuccessAlertComponent
  }
  buttonclick()
  {
-   this.isClicked=true;
    this.count++;
    this.NewArray[this.i] = this.count;
+   this.i++;
  }
 }
