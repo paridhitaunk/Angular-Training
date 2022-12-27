@@ -1,0 +1,47 @@
+<div>
+<form name="form"
+#f="ngForm" >
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="firstName" aria-label="firstName" aria-describedby="basic-addon1" [(ngModel)]="obj.firstName" required minlength="2" maxlength="20">
+            <div *ngIf="f.submitted && obj.firstName.errors" class="invalid-feedback">
+                <div *ngIf="obj.firstName.errors['required']">Username is required</div>
+                <div *ngIf="obj.firstName.errors['minlength']">
+                  Username must be at least 6 characters
+                </div>
+                <div *ngIf="obj.firstName.errors['maxlength']">
+                  Username must be at most 20 characters
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" formControlName="lname" placeholder="lastName" aria-label="lastName" aria-describedby="basic-addon1" [(ngModel)]="obj.lastName" required minlength="2" maxlength="20">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" formControlName="empId" placeholder="employee Id" aria-label="Emp Id" aria-describedby="basic-addon1" [(ngModel)]="obj.empId" required>
+        </div>  
+        <div class="col-md-6">
+            <input type="text" class="form-control" formControlName="gender" placeholder="gender" aria-label="gender" aria-describedby="basic-addon1"  [(ngModel)]="obj.gender" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="email" class="form-control" formControlName="email" placeholder="emailId" aria-label="emailId" aria-describedby="basic-addon2" [(ngModel)]="obj.emailId" required >
+           
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="number" class="form-control" formControlName="phoneno" placeholder="phoneNumber" aria-label="phoneNumber" aria-describedby="basic-addon2" [(ngModel)]="obj.phoneNumber" required>
+        </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary btn-block" (click)="bclick(obj)">Submit</button>
+    <button type="button" class="btn btn-info btn-block" (click)="onReset()">Reset</button>
+</form>
+</div>
