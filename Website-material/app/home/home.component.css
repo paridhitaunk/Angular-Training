@@ -1,0 +1,36 @@
+.intro-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 620px;
+    margin-bottom: 100px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #161515;
+    background-image: url("https://t3.ftcdn.net/jpg/04/53/61/00/360_F_453610098_zdOp8kYCIUVamtdMpN8Uh6extkLzVvLJ.jpg");
+    background-position: 50% 50%; 
+    background-size: cover;
+    color: #fff;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+.heading-jumbo
+{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+}

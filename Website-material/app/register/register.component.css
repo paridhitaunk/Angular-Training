@@ -1,0 +1,22 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  .example-full-width {
+    width: 100%;
+  }
+
+.form{
+  width:fit-content;
+    text-align: center;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+  padding: 40px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    font-family:'Times New Roman', Times, serif;
+    font-style: 'Times New Roman';
+}

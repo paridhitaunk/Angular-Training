@@ -1,0 +1,56 @@
+<div class="form">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Fullname</mat-label>
+      <input matInput placeholder="enter full-name" required >
+      <mat-icon matSuffix>name</mat-icon>
+      </mat-form-field>
+        <br>
+  <mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>email</mat-label>
+  <input matInput placeholder="enter email" required>
+  <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+          <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix>+91 &nbsp;</span>
+      <input type="tel" matInput placeholder="555-555-1234">
+      <mat-icon matSuffix>mode_edit</mat-icon></mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" >
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> &nbsp;
+      <mat-form-field appearance="fill" >
+        <mat-label>Select skill</mat-label>
+        <mat-select>
+          <mat-option value="one">Angular Basic</mat-option>
+          <mat-option value="two">Angular Intermediate</mat-option>
+          <mat-option value="three">Angular Advanced</mat-option>
+        </mat-select>
+      </mat-form-field>
+        <br>
+        <mat-label>Gender 
+        </mat-label>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Male</mat-radio-button >
+        <mat-radio-button value="2"> Female</mat-radio-button>  
+        <mat-radio-button value="2"> Other</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+    <button mat-raised-button color="accent">submit</button>
+  </form>
+  </div>
