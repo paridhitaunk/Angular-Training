@@ -1,0 +1,29 @@
+.about
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 20px;
+}
+.yash-invisible
+{
+    display: none;
+}
+.yash ul,
+.yash li{
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+}
+.yash .mat-nested-tree-node
+div[role=group]
+{
+    padding-left: 40px;
+}
+.yash div[role=group]> .mat-tree-node{
+
+    padding-left: 40px;
+}

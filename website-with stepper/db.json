@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "fullName": "Paridhi Taunk",
+      "userName": "paridhitaunk",
+      "emailId": "paridhitaunk@gmail.com",
+      "password": "paridhi123",
+      "gender": "Female",
+      "dateOfBirth": "2023-01-02T18:30:00.000Z",
+      "phoneNumber": "9521206684",
+      "skill": "Angular Intermediate",
+      "id": 2
+    }
+  ],
+  "stepper": [
+    {
+      "fullName": "Paridhi Taunk",
+      "emailId": "paridhitaunk12@gmail.com",
+      "fathersName": "Rajesh Taunk",
+      "mothersName": "Asha Taunk",
+      "gender": "Female",
+      "skill": "Angular Basic",
+      "dateOfBirth": "2023-01-10T18:30:00.000Z",
+      "fullNameBank": "paridhitaunk",
+      "accNo": "",
+      "bankName": "",
+      "IFSCcode": "",
+      "netBanking": "yes",
+      "mobBanking": "no",
+      "presentAddress": "231,khatiwala",
+      "permanentAddress": "37,bazar chowk",
+      "phoneNumber": "9521206684",
+      "id": 1
+    }
+  ]
+}

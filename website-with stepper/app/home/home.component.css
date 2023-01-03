@@ -1,0 +1,27 @@
+.intro-header {
+   
+    display: flex;
+    height: 620px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0c0c;
+    background-image: url("https://img.freepik.com/premium-vector/purple-background-pastel-mottled-border-texture-blurred-grunge-design-old-vintage-background_266878-501.jpg?w=1060");
+    background-position: 50% 50%; 
+    background-size: cover;
+    color: rgb(252, 248, 248);
+}
+.heading-jumbo
+{
+    font-style: italic,bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:xx-large;
+    text-shadow: 2px 2px black ;
+}
+.intro-content
+{
+    background: rgb(233, 189, 236);
+    padding: 5%;
+}
+
+ 

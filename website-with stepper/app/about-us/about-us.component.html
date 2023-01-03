@@ -1,0 +1,142 @@
+<div class="aboutus">
+<div class="about">
+    <p>Determinate</p>
+    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    <p>Indeterminate</p>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <p>Buffer</p>
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+        <p>Query</p>
+        <mat-progress-bar mode="query"></mat-progress-bar>
+        <mat-list>
+            <mat-list-item>Course 1</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Course 2</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Course 3</mat-list-item>
+          </mat-list>
+        
+</div>
+<div class="about">
+    <mat-chip-listbox aria-label="Hobbies Selection">
+        <mat-chip-option>Music</mat-chip-option>
+        <mat-chip-option>Dance</mat-chip-option>
+        <mat-chip-option>Travelling</mat-chip-option>
+        <mat-chip-option color="accent" selected>Reading</mat-chip-option>
+        <mat-chip-option color="warn">Painting</mat-chip-option>
+      </mat-chip-listbox>
+</div>
+<div>
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput  formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input matInput formControlName="secondCtrl" 
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+</div>
+<div>
+    <button mat-raised-button matTooltip="This is tooltip">Tooltip</button>
+</div>
+<div>
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Yash expansion panel</mat-panel-title>
+          <mat-panel-description>This is the explanation of expansion panel</mat-panel-description>
+        </mat-expansion-panel-header>
+        <h1>Welcome to the implementation of expansion panel</h1>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="openState=true" (closed)="openState=false">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Yash expansion panel with icon</mat-panel-title>
+          <mat-panel-description>This is explnation  of with icon{{openState? 'open': 'closed'}}</mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <h1>I am opening the expansion panel using icon</h1>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+  </div>
+  <div>
+    <mat-button-toggle-group #group="matButtonToggleGroup" name="fontStyle" aria-label="Font Style">
+
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div>{{group.value}}</div>
+  </div>
+  <div>
+    <mat-button-toggle-group #groups="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" multiple>
+
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div>{{groups.value}}</div>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Message</mat-label>
+      <input matInput value="Welcome to Yash" #message>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Action</mat-label>
+      <input matInput value="Paridhi Taunk" #action>
+    </mat-form-field>
+
+    <button mat-stroked-button (click)="openSnackBar(message.value,action.value)">Click Here</button>
+  </div>
+
+  <!-- <div>
+    <table matSort(matSortchange)="sortData($event)"></table>
+    <tr>
+      <th mat-sort-header="name"> EmpName</th>
+      <th mat-sort-header="empid">EmpId</th>
+      <th mat-sort-header="designation">Designation</th>
+    </tr>
+    <tr *ngFor="let e of sortedData">
+      <td>{{e.name}}</td>
+      <td>{{e.empid}}</td>
+      <td>{{e.designation}}</td>
+    </tr>
+  </div> -->
+  <div>
+    <mat-slider min="100" max="1000" step="100" value="500" showTickMarks discrete>
+      <!-- <input matSliderStartThumb value="400" >
+      <input matSliderEndThumb value="700" > -->
+      <input >
+    </mat-slider>
+  </div>
+</div>
